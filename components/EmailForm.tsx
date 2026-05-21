@@ -30,7 +30,7 @@ export function EmailForm({ onSubmit = defaultSubmit }: { onSubmit?: (email: str
     <div className="flex w-full max-w-[420px] flex-col items-center gap-2">
       <div className="flex w-full gap-2">
         <input
-          type="email" placeholder="留下邮箱" value={email}
+          type="email" placeholder="留下邮箱" aria-label="邮箱" value={email}
           onChange={(e) => setEmail(e.target.value)}
           className="glass-thin flex-1 rounded-full px-5 py-3 text-[14px] text-fg outline-none"
         />
@@ -38,7 +38,7 @@ export function EmailForm({ onSubmit = defaultSubmit }: { onSubmit?: (email: str
           {busy ? "提交中…" : "预约内测"}
         </button>
       </div>
-      {error && <p className="text-[12.5px] text-mood-irr">{error}</p>}
+      {error && <p className="text-[12.5px] text-[#c0392b]">{error}</p>}
     </div>
   );
 }

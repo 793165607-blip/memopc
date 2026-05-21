@@ -12,7 +12,7 @@ const DOTS = [
 export function Record() {
   const r = content.record;
   const media = (
-    <div className="glass relative w-full max-w-[400px] p-[34px_30px]" style={{ minHeight: 230, padding: "34px 30px" }}>
+    <div className="glass relative w-full max-w-[400px] p-[34px_30px]" style={{ minHeight: 230 }}>
       <div className="pointer-events-none absolute inset-0">
         {DOTS.map((d, i) => (<span key={i} className="mood-dot" style={{ background: d.c, ...d.style }} aria-hidden />))}
       </div>

@@ -6,9 +6,7 @@ const config: Config = {
       colors: {
         ink: "#27313f",
         fg: "#2C2C2E",
-        muted: "#8E8E93",
-        brandblue: "#60a5fa",
-        brandgold: "#C8AD78",
+        muted: "#6b6b70",
         mood: {
           joy: "#f4cf6a", calm: "#7fb4f0", low: "#aab2c0",
           irr: "#f3a39c", tangle: "#8fd0f7", tired: "#b9a6ee",

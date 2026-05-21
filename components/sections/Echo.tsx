@@ -5,7 +5,7 @@ import { Reveal } from "@/components/primitives/Reveal";
 export function Echo() {
   const e = content.echo;
   const media = (
-    <div className="glass w-full max-w-[400px] p-[30px_30px_26px]" style={{ padding: "30px 30px 26px" }}>
+    <div className="glass w-full max-w-[400px] p-[30px_30px_26px]">
       <svg viewBox="0 0 360 70" fill="none" className="mb-[18px] block h-[70px] w-full" aria-hidden>
         <path d="M6 50 C 60 14, 110 60, 160 34 S 270 8, 354 30" stroke="rgba(96,165,250,.35)" strokeWidth="2" fill="none" />
         <circle cx="6" cy="50" r="6" fill="#aab2c0" /><circle cx="86" cy="30" r="6" fill="#f4cf6a" />
