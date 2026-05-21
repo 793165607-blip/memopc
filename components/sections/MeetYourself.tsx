@@ -12,10 +12,18 @@ export function MeetYourself() {
       </Reveal>
       <Reveal delay={160}><p className="max-w-[560px] text-[17px] leading-[1.85] text-muted">{m.body}</p></Reveal>
       <Reveal delay={240} className="w-full">
-        <div className="relative mx-auto mt-[34px] h-[360px] w-full max-w-[780px]">
+        <div className="relative mx-auto mt-[34px] hidden h-[360px] w-full max-w-[780px] md:block">
           {m.facets.map((f) => (
             <div key={f.label} className="memory-orb anim-float"
               style={{ width: f.size, height: f.size, left: f.left, top: f.top, animationDuration: `${6 + (f.size % 5)}s` }}>
+              <b>{f.label}</b><span>{f.value}</span>
+            </div>
+          ))}
+        </div>
+        {/* 窄屏：流式排布 */}
+        <div className="mt-8 flex flex-wrap justify-center gap-4 md:hidden">
+          {m.facets.map((f) => (
+            <div key={f.label} className="memory-orb anim-float !static flex h-[110px] w-[110px]">
               <b>{f.label}</b><span>{f.value}</span>
             </div>
           ))}

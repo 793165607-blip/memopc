@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root{
-  --fg:#2C2C2E; --ink:#27313f; --muted:#8E8E93;
+  --fg:#2C2C2E; --ink:#27313f; --muted:#6b6b70;
   --blue:#60a5fa; --gold:#C8AD78;
   --m-joy:#f4cf6a; --m-calm:#7fb4f0; --m-low:#aab2c0;
   --m-irr:#f3a39c; --m-tangle:#8fd0f7; --m-tired:#b9a6ee;
