@@ -18,10 +18,10 @@ export function Record() {
         <span className="write-cursor" />
       </p>
       <div className="write-rule my-7" />
-      <div className="flex flex-wrap items-center gap-x-6 gap-y-3">
-        {r.modes.map((m) => (
-          <span key={m} className="mode-tag">
-            <i aria-hidden />
+      <div className="flex flex-wrap items-center gap-x-3 gap-y-2 text-[13px] tracking-[.05em] text-muted">
+        {r.modes.map((m, i) => (
+          <span key={m} className="flex items-center gap-3">
+            {i > 0 && <span className="mode-sep">·</span>}
             {m}
           </span>
         ))}

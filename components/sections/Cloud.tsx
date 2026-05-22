@@ -2,12 +2,13 @@ import { content } from "@/lib/content";
 import { Section, TwoCol } from "@/components/primitives/Section";
 import { Reveal } from "@/components/primitives/Reveal";
 import { Orb } from "@/components/primitives/Orb";
+import { Parallax } from "@/components/primitives/Parallax";
 
 export function Cloud() {
   const c = content.cloud;
   const media = (
     <div className="relative flex min-h-[380px] w-full items-center justify-center">
-      <Orb variant="warm" size={170} ripples={[250, 340]} animate="breathe" />
+      <Parallax amount={40}><Orb variant="warm" size={170} ripples={[250, 340]} /></Parallax>
       <div className="encounter absolute -right-1 bottom-6">
         <div className="flex items-center gap-[9px]">
           <span className="av" aria-hidden />

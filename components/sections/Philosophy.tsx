@@ -18,7 +18,7 @@ export function Philosophy() {
       <div className="mt-12 grid w-full gap-[18px] md:grid-cols-3">
         {p.pillars.map((pl, i) => (
           <Reveal key={pl.num} delay={i * 90}>
-            <article className="glass h-full p-[30px] text-left">
+            <article className="glass lift h-full p-[30px] text-left">
               <span className="num block mb-[14px]">{pl.num}</span>
               <h3 className="serif mb-2 text-[21px] font-semibold text-ink">{pl.h}</h3>
               <p className="text-[14px] leading-[1.7] text-muted">{pl.p}</p>

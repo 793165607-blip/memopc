@@ -9,7 +9,7 @@ export function Nav() {
         </a>
         <div className="hidden gap-[26px] text-[13px] text-muted sm:flex">
           {navLinks.map((l) => (
-            <a key={l.href} href={l.href} className="transition-colors hover:text-fg">{l.label}</a>
+            <a key={l.href} href={l.href} className="navlink hover:text-fg">{l.label}</a>
           ))}
         </div>
         <a href="#closing" className="rounded-full border-[.5px] border-white/80 bg-white/60 px-4 py-[7px] text-[12.5px]">

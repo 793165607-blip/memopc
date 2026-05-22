@@ -2,6 +2,7 @@ import { content } from "@/lib/content";
 import { Reveal } from "@/components/primitives/Reveal";
 import { Button } from "@/components/primitives/Button";
 import { Orb } from "@/components/primitives/Orb";
+import { Parallax } from "@/components/primitives/Parallax";
 import { AmbientField } from "@/components/primitives/AmbientField";
 
 export function Hero() {
@@ -25,9 +26,8 @@ export function Hero() {
         </div>
       </Reveal>
       <Reveal delay={340} className="mt-14">
-        <Orb size={168} animate="breathe" />
+        <Parallax amount={28}><Orb size={168} /></Parallax>
       </Reveal>
-      <span className="eyebrow absolute bottom-[34px] left-1/2 -translate-x-1/2">scroll</span>
     </section>
   );
 }

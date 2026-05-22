@@ -2,12 +2,13 @@ import { content } from "@/lib/content";
 import { Section, TwoCol } from "@/components/primitives/Section";
 import { Reveal } from "@/components/primitives/Reveal";
 import { Orb } from "@/components/primitives/Orb";
+import { Parallax } from "@/components/primitives/Parallax";
 
 export function Companion() {
   const c = content.companion;
   const media = (
     <div className="relative flex min-h-[360px] w-full items-center justify-center">
-      <Orb variant="twin" size={140} ripples={[220, 300]} animate="float" />
+      <Parallax amount={36}><Orb variant="twin" size={140} ripples={[220, 300]} /></Parallax>
       <div className="resp absolute right-0 top-10">{c.response[0]}<br />{c.response[1]}</div>
     </div>
   );
