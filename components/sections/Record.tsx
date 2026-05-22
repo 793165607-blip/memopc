@@ -2,23 +2,29 @@ import { content } from "@/lib/content";
 import { Section, TwoCol } from "@/components/primitives/Section";
 import { Reveal } from "@/components/primitives/Reveal";
 
-const DOTS = [
-  { c: "var(--m-joy)", style: { left: "8%", top: "14%" } },
-  { c: "var(--m-calm)", style: { right: "12%", top: "22%" } },
-  { c: "var(--m-tired)", style: { right: "18%", bottom: "24%" } },
-  { c: "var(--m-tangle)", style: { left: "14%", bottom: "20%" } },
-];
-
 export function Record() {
   const r = content.record;
   const media = (
-    <div className="glass relative w-full max-w-[400px] p-[34px_30px]" style={{ minHeight: 230 }}>
-      <div className="pointer-events-none absolute inset-0">
-        {DOTS.map((d, i) => (<span key={i} className="mood-dot" style={{ background: d.c, ...d.style }} aria-hidden />))}
-      </div>
-      <div className="serif text-[26px] tracking-[.04em] text-ink">{r.writingLine}<span className="write-cursor" /></div>
-      <div className="mt-[30px] flex flex-wrap gap-[10px]">
-        {r.modes.map((m) => (<span key={m} className="mode-chip">{m}</span>))}
+    <div className="glass relative w-full max-w-[420px] overflow-hidden p-9 sm:p-10">
+      {/* 柔和内光 */}
+      <div
+        className="pointer-events-none absolute -right-12 -top-12 h-36 w-36 rounded-full"
+        style={{ background: "radial-gradient(circle,rgba(127,180,240,.14),transparent 70%)" }}
+        aria-hidden
+      />
+      <div className="eyebrow mb-6">今天 · 22:14</div>
+      <p className="serif text-[23px] leading-[1.75] text-ink sm:text-[25px]">
+        {r.writingLine}
+        <span className="write-cursor" />
+      </p>
+      <div className="write-rule my-7" />
+      <div className="flex flex-wrap items-center gap-x-6 gap-y-3">
+        {r.modes.map((m) => (
+          <span key={m} className="mode-tag">
+            <i aria-hidden />
+            {m}
+          </span>
+        ))}
       </div>
     </div>
   );

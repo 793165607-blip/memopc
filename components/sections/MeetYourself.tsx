@@ -1,6 +1,7 @@
 import { content } from "@/lib/content";
 import { Section } from "@/components/primitives/Section";
 import { Reveal } from "@/components/primitives/Reveal";
+import { AmbientField } from "@/components/primitives/AmbientField";
 
 export function MeetYourself() {
   const m = content.meetYourself;
@@ -13,6 +14,7 @@ export function MeetYourself() {
       <Reveal delay={160}><p className="max-w-[560px] text-[17px] leading-[1.85] text-muted">{m.body}</p></Reveal>
       <Reveal delay={240} className="w-full">
         <div className="relative mx-auto mt-[34px] hidden h-[360px] w-full max-w-[780px] md:block">
+          <AmbientField />
           {m.facets.map((f) => (
             <div key={f.label} className="memory-orb anim-float"
               style={{ width: f.size, height: f.size, left: f.left, top: f.top, animationDuration: `${6 + (f.size % 5)}s` }}>
