@@ -17,8 +17,8 @@ npm test           # vitest（content / EmailForm / 整页烟雾，共 8 例）
 - **文案唯一来源是 `lib/content.ts`** — 组件里不要硬编码用户可见文案。
 - **设计 token 唯一来源是 `app/globals.css` + `tailwind.config.ts`**，颜色镜像自 App `代码/src/styles/theme.css`（蓝 `#60a5fa` / 暖金 `#C8AD78` / 六情绪色 `--m-*`）。无紫调主色。
 - **`muted` 文字色是 `#6b6b70`**（tailwind token 与 CSS 变量都是它），满足 WCAG AA；不要回退到 `#8E8E93`（对比度不达标）。
-- **`"use client"` 只用在 `Reveal` / `Orb` / `EmailForm`**；版块（sections）与 Nav/Footer 是 server component。
-- 动效走 framer-motion 且必须尊重 `prefers-reduced-motion`（`Reveal`/`Orb` 已用 `useReducedMotion` 守卫，globals.css 有 reduce 媒体查询）。
+- **`"use client"` 只用在 primitives（`Reveal` / `Orb` / `Parallax` / `Typewriter` / `EchoRibbon`）与 `EmailForm`**；版块（sections）与 Nav/Footer 是 server component。新增动效时建一个 client primitive，别把版块改成 client。
+- 动效走 framer-motion 且必须尊重 `prefers-reduced-motion`（所有动效 primitive 都用 `useReducedMotion`／`useInView` 守卫，globals.css 有 reduce 媒体查询）。
 
 ## 结构与约定
 

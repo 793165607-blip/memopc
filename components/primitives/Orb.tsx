@@ -31,7 +31,6 @@ export function Orb({
   variant?: OrbVariant;
   size: number;
   ripples?: number[];
-  animate?: "breathe" | "float";
   className?: string;
 }) {
   const reduce = useReducedMotion();

@@ -19,13 +19,13 @@ export function Parallax({
 
   if (reduce) {
     return (
-      <div ref={ref} className={className}>
+      <div ref={ref} className={`relative ${className}`}>
         {children}
       </div>
     );
   }
   return (
-    <motion.div ref={ref} style={{ y }} className={className}>
+    <motion.div ref={ref} style={{ y }} className={`relative ${className}`}>
       {children}
     </motion.div>
   );

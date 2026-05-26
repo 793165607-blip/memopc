@@ -9,7 +9,7 @@ export function Cloud() {
   const media = (
     <div className="relative flex min-h-[380px] w-full items-center justify-center">
       <Parallax amount={40}><Orb variant="warm" size={170} ripples={[250, 340]} /></Parallax>
-      <div className="encounter absolute -right-1 bottom-6">
+      <div className="encounter absolute right-0 bottom-6">
         <div className="flex items-center gap-[9px]">
           <span className="av" aria-hidden />
           <div>
@@ -18,7 +18,7 @@ export function Cloud() {
           </div>
         </div>
         <div className="serif mt-3 text-[15px] text-ink">{c.encounter.theme}</div>
-        <div className="mt-0.5 text-[12px] italic text-muted">{c.encounter.quote}</div>
+        <div className="mt-0.5 text-[13px] italic text-muted">{c.encounter.quote}</div>
       </div>
     </div>
   );

@@ -1,6 +1,7 @@
 import { content } from "@/lib/content";
 import { Section, TwoCol } from "@/components/primitives/Section";
 import { Reveal } from "@/components/primitives/Reveal";
+import { Typewriter } from "@/components/primitives/Typewriter";
 
 export function Record() {
   const r = content.record;
@@ -14,8 +15,7 @@ export function Record() {
       />
       <div className="eyebrow mb-6">今天 · 22:14</div>
       <p className="serif text-[23px] leading-[1.75] text-ink sm:text-[25px]">
-        {r.writingLine}
-        <span className="write-cursor" />
+        <Typewriter text={r.writingLine} />
       </p>
       <div className="write-rule my-7" />
       <div className="flex flex-wrap items-center gap-x-3 gap-y-2 text-[13px] tracking-[.05em] text-muted">

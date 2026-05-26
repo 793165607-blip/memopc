@@ -7,7 +7,7 @@
   --blue:#60a5fa; --gold:#C8AD78;
   --m-joy:#f4cf6a; --m-calm:#7fb4f0; --m-low:#aab2c0;
   --m-irr:#f3a39c; --m-tangle:#8fd0f7; --m-tired:#b9a6ee;
-  --serif:var(--font-serif),Georgia,'Songti SC',serif;
+  --serif:var(--font-serif,Georgia),Georgia,'Songti SC','Noto Serif SC',serif;
 }
 
 html{scroll-behavior:smooth;}
@@ -121,6 +121,8 @@ body{
 /* ── 移动端降 blur 保性能 ── */
 @media (max-width:768px),(hover:none){
   .glass,.glass-thin,.nav-glass{backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);}
+  .orb-aura{filter:blur(22px);}
+  .orb-glow{filter:blur(18px);}
 }
 
 /* ── 尊重 reduced-motion ── */
